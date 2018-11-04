@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pop_bg"
+    tools:context=".CityPopActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <ImageView
+        android:id="@+id/closeImgButton"
+        android:layout_width="56dp"
+        android:layout_height="35dp"
+        android:src="@drawable/close_pop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+
+        android:paddingTop="@dimen/activity_vertical_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/closeImgButton"
+        tools:context=".MainActivity">
+        <!--app:layout_constraintTop_toBottomOf="@+id/closeButton"-->
+
+        <TextView
+            android:id="@+id/countrySH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="3dp"
+            android:text="Country"
+            android:textColor="#ff7d7d7d"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/countrySHResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/countrySH"
+            android:layout_marginLeft="35dp"
+            android:layout_toRightOf="@id/countrySH"
+            android:text="-"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/citySH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/countrySH"
+            android:layout_below="@id/countrySH"
+            android:layout_marginTop="5dp"
+            android:text="City"
+            android:textColor="#ff7d7d7d"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/citySHResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/citySH"
+            android:layout_alignLeft="@id/countrySHResult"
+            android:layout_toRightOf="@id/citySH"
+            android:text="-"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/sunriseSH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/citySH"
+            android:layout_below="@id/citySH"
+            android:layout_marginTop="5dp"
+            android:text="Sunrise"
+            android:textColor="#ff7d7d7d"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/sunriseSHResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/sunriseSH"
+            android:layout_alignLeft="@id/citySHResult"
+            android:layout_toRightOf="@id/sunriseSH"
+            android:text="-"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/sunsetSH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/sunriseSH"
+            android:layout_below="@id/sunriseSH"
+            android:layout_marginTop="5dp"
+            android:text="Sunset"
+            android:textColor="#ff7d7d7d"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/sunsetSHResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/sunsetSH"
+            android:layout_alignLeft="@id/sunriseSHResult"
+            android:layout_toRightOf="@id/sunsetSH"
+            android:text="-"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/descriptionSH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/sunsetSH"
+            android:layout_below="@id/sunsetSH"
+            android:layout_marginTop="5dp"
+            android:text="Description"
+            android:textColor="#ff7d7d7d"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/descriptionSHResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/descriptionSH"
+            android:layout_alignLeft="@id/sunsetSHResult"
+            android:layout_toRightOf="@id/descriptionSH"
+            android:text="-"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/sunsetSHResult"
+            android:layout_below="@id/descriptionSH"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp" />
+
+
+        <TextView
+            android:id="@+id/temperatureSH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/descriptionSH"
+            android:layout_below="@id/img"
+            android:layout_marginTop="5dp"
+            android:text="Temperature"
+            android:textColor="#ff7d7d7d"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/temperatureSHResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/temperatureSH"
+            android:layout_alignLeft="@id/sunsetSHResult"
+            android:layout_toRightOf="@id/temperatureSH"
+            android:text="-"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/humiditySH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/temperatureSH"
+            android:layout_below="@id/temperatureSH"
+            android:layout_marginTop="5dp"
+            android:text="Humidity"
+            android:textColor="#ff7d7d7d"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/humiditySHResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/humiditySH"
+            android:layout_alignLeft="@id/temperatureSHResult"
+            android:layout_toRightOf="@id/humiditySH"
+            android:text="-"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/windSpeedSH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/humiditySH"
+            android:layout_below="@id/humiditySH"
+            android:layout_marginTop="5dp"
+            android:text="Wind Speed"
+            android:textColor="#ff7d7d7d"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/windSpeedSHResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/windSpeedSH"
+            android:layout_alignLeft="@id/humiditySHResult"
+            android:layout_toRightOf="@id/windSpeedSH"
+            android:text="-"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
